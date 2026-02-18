@@ -37,4 +37,4 @@ Para reproducir este análisis:
 Si buscas transformar datos en decisiones estratégicas bajo el método CIPO:
 * **LinkedIn**: [linkedin.com/in/alejandronieto-cipo-mentor-consultor](https://linkedin.com/in/alejandronieto-cipo-mentor-consultor)
 * **Sitio Web**: [alejandronietoalvarez.com](https://alejandronietoalvarez.com)
-* **Substack**: [CI PO demos avanzar](https://alejandronieto.substack.com/)
+* **Substack**: [CIPO para líderes](https://alejandronieto.substack.com/)
