@@ -1,42 +1,35 @@
-# 📊 Landing Page A/B Testing: Optimización de Conversión con Enfoque CIPO
+# 🚀 Proyecto 8: Validando Hipótesis de Negocio con Pruebas Estadísticas
 
-[cite_start]Este proyecto consiste en la validación estadística de un experimento A/B ejecutado en la página de inicio (landing page) de una empresa de ecommerce[cite: 3, 4]. [cite_start]El objetivo principal fue determinar qué versión (A o B) maximiza la tasa de conversión y el valor económico por usuario[cite: 5, 9].
+![A/B Testing](https://img.shields.io/badge/A%2FB_Testing-Validation-red) ![Python](https://img.shields.io/badge/Python-3.9+-green) ![Ecommerce](https://img.shields.io/badge/Ecommerce-Analysis-yellow)
 
-## 🎯 Objetivo del Negocio
-[cite_start]Identificar diferencias significativas entre las versiones de la página y traducir los resultados en recomendaciones accionables para optimizar la estrategia de marketing y el diseño web[cite: 9, 15].
+## 🎯 Objetivo del Proyecto
+[cite_start]El objetivo es evaluar un experimento A/B ejecutado en la página de inicio (landing page) de una empresa de ecommerce para identificar diferencias significativas entre dos versiones (A y B)[cite: 4]. [cite_start]Se busca optimizar la tasa de conversión y el valor económico por usuario mediante decisiones basadas en evidencia estadística sólida, considerando el comportamiento por canal y tipo de usuario[cite: 5, 9].
 
-## 🛠️ Stack Tecnológico
-* **Python**: Análisis de datos y computación estadística.
-* [cite_start]**Pandas**: Manipulación y limpieza de datos[cite: 25].
-* [cite_start]**SciPy & Statsmodels**: Implementación de pruebas t de Student, Z-test para proporciones y Chi-cuadrado[cite: 19].
-* [cite_start]**Seaborn & Matplotlib**: Visualización de métricas de negocio y comportamiento de usuarios[cite: 21, 57].
+## 📊 Datasets Utilizados
+[cite_start]Se trabajó con un conjunto de datos centralizado que representa la exposición de los usuarios[cite: 27]:
+* [cite_start]**`landing_experiment.csv`**: Información de usuarios incluyendo región, dispositivo, fuente de tráfico, tipo de usuario, conversión y gasto[cite: 7, 25].
+* [cite_start]**Variable Objetivo**: `converted` (binaria) e ingresos generados (`gasto`), validando que el gasto solo sea > 0 cuando existe una compra exitosa[cite: 31, 34].
 
----
+## 🛠️ Metodología de Análisis (CIPO)
+[cite_start]El flujo de trabajo se alineó con la metodología CIPO para garantizar impacto de negocio[cite: 45]:
 
-## 🚀 Metodología CIPO (Conocer, Identificar, Proponer, Optimizar)
+1.  [cite_start]**Conocer:** Carga y validación de datos para asegurar la calidad del experimento y confirmar que los grupos están balanceados[cite: 39, 45].
+2.  [cite_start]**Identificar:** * Comparación de **gasto promedio** por usuario convertido mediante pruebas estadísticas de diferencia de medias[cite: 11, 45].
+    * [cite_start]Evaluación de la **tasa de conversión** entre versiones A y B para identificar la más efectiva[cite: 12, 45].
+3.  [cite_start]**Proponer:** Análisis de la influencia de la **fuente de tráfico** y el **tipo de usuario** (nuevo vs. recurrente) en la conversión[cite: 13, 14, 45].
+4.  [cite_start]**Optimizar:** Generación de visualizaciones e **insights ejecutivos** para respaldar recomendaciones de inversión y diseño[cite: 15, 45, 57].
 
-### [cite_start]1. **C - Conocer (Validación de Datos)** [cite: 45]
-* [cite_start]Exploración del dataset `landing_experiment.csv` con información de usuarios, región, dispositivo y fuente de tráfico[cite: 7, 25].
-* [cite_start]Verificación de la integridad de la variable `gasto`, asegurando que solo existan valores mayores a cero en usuarios convertidos[cite: 34].
+## 📈 Hallazgos Clave
+* [cite_start]**Valor Económico:** Determinación de si una versión de la landing page genera un ticket promedio mayor por cliente[cite: 11].
+* [cite_start]**Efectividad de Conversión:** Validación de qué página atrae un mayor volumen de usuarios convertidos con significancia estadística[cite: 12].
+* [cite_start]**Eficiencia de Canales:** Identificación de las fuentes de tráfico más rentables para optimizar el presupuesto de marketing[cite: 13, 15].
 
-### [cite_start]2. **I - Identificar (Análisis Estadístico)** [cite: 47]
-* [cite_start]**Comparación de Gasto Promedio**: Uso de la **Prueba t de Student** para muestras independientes para identificar qué versión genera más valor por cliente[cite: 11, 19].
-* [cite_start]**Comparación de Tasa de Conversión**: Aplicación del **Z-test** para determinar la efectividad relativa entre la página A (control) y la página B (prueba)[cite: 12, 19].
-* [cite_start]**Análisis de Segmentos**: Pruebas de **Chi-cuadrado** para evaluar si la conversión depende de la fuente de tráfico o del tipo de usuario (Nuevo vs. Recurrente)[cite: 13, 14, 19].
-
-### [cite_start]3. **P - Proponer (Insights Ejecutivos)** [cite: 22, 45]
-* [cite_start]Interpretación de valores $p$ (p-values) desde una perspectiva de impacto económico[cite: 20, 50].
-* [cite_start]Identificación de canales de tráfico de alto rendimiento para optimizar la inversión[cite: 15, 45].
-
-### [cite_start]4. **O - Optimizar (Recomendaciones)** [cite: 45]
-* [cite_start]Definición de la versión de página a implementar basada en evidencia estadística sólida[cite: 42].
-* [cite_start]Estrategias de segmentación para usuarios recurrentes vs. nuevos prospectos[cite: 38].
-
----
-
-## 📂 Estructura del Proyecto
-* [cite_start]`/datasets/landing_experiment.csv`: Información de usuarios expuestos al experimento[cite: 24].
-* [cite_start]`Notebook_Analisis_AB.ipynb`: Proceso completo de limpieza, pruebas estadísticas y visualizaciones[cite: 43, 60].
+## 🚀 Cómo Ejecutar el Proyecto
+Para reproducir este análisis:
+1. Clona el repositorio: `git clone https://github.com/tu-usuario/landing-page-ab-analysis.git`
+2. Abre el notebook estructurado en **Jupyter** o **Google Colab**.
+3. [cite_start]Asegúrate de que el archivo `/datasets/landing_experiment.csv` esté disponible en el entorno[cite: 7].
+4. [cite_start]Ejecuta las celdas secuencialmente para validar supuestos y observar las conclusiones estadísticas[cite: 61].
 
 ---
 
@@ -44,4 +37,4 @@
 Si buscas transformar datos en decisiones estratégicas bajo el método CIPO:
 * **LinkedIn**: [linkedin.com/in/alejandronieto-cipo-mentor-consultor](https://linkedin.com/in/alejandronieto-cipo-mentor-consultor)
 * **Sitio Web**: [alejandronietoalvarez.com](https://alejandronietoalvarez.com)
-* **Substack**: [CIPO para líderes](https://alejandronieto.substack.com/)
+* **Substack**: [CI PO demos avanzar](https://alejandronieto.substack.com/)
